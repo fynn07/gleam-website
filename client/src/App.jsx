@@ -3,33 +3,39 @@ import Landing from './components/Landing';
 import NavBar from './components/NavBar';
 import About from './components/About';
 import Music from './components/Music';
+import Gigs from './components/Gigs';
 
 function App() {
   const [landingOpacity, setLandingOpacity] = useState(1);
   const [aboutOpacity, setAboutOpacity] = useState(1);
   const [musicOpacity, setMusicOpacity] = useState(1);
+  const [gigOpacity, setGigOpacity] = useState(1);
 
   const landingRef = useRef(null);
   const aboutRef = useRef(null);
   const musicRef = useRef(null);
+  const gigRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const landingPosition = landingRef.current.getBoundingClientRect().top;
       const aboutPosition = aboutRef.current.getBoundingClientRect().top;
       const musicPosition = musicRef.current.getBoundingClientRect().top;
+      const gigPosition = gigRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
       // Calculate distance from center of viewport
       const landingDistanceFromCenter = Math.abs(windowHeight / 10 - landingPosition * 1.2);
       const aboutDistanceFromCenter = Math.abs(windowHeight / 10 - aboutPosition * 1.2);
       const musicDistanceFromCenter = Math.abs(windowHeight / 10 - musicPosition * 1.2);
+      const gigDistanceFromCenter = Math.abs(windowHeight / 10 - gigPosition * 1.2);
 
       // Calculate opacity based on distance from center
       const maxDistance = windowHeight / 2;
       setLandingOpacity(1 - landingDistanceFromCenter / maxDistance);
       setAboutOpacity(1 - aboutDistanceFromCenter / maxDistance);
       setMusicOpacity(1 - musicDistanceFromCenter / maxDistance);
+      setGigOpacity(1 - gigDistanceFromCenter / maxDistance);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -59,6 +65,9 @@ function App() {
         </div>
         <div style={{ opacity: musicOpacity }} ref={musicRef}>
         <Music />
+        </div>
+        <div style={{ opacity: gigOpacity }} ref={gigRef}>
+        <Gigs />
         </div>
       </div>
     </div>
