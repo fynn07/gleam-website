@@ -1,11 +1,12 @@
-const NavBar = () => {
+const NavBar = ({ scrollToAbout, scrollToMusic, scrollToGigs }) => {
     return (
-        <div className="flex justify-around bg-transparent py-4 sticky top-10">
-            <p className="font-pragati text-white text-2xl">GIGS</p>
-            <p className="font-pragati text-white text-2xl">MERCH</p>
-            <p className="font-pragati text-white text-2xl">MUSIC</p>
-            <p className="font-pragati text-white text-2xl">ABOUT</p>
-        </div>
+        <nav className="flex justify-around bg-transparent py-4 sticky top-10 z-50">
+            <p className="font-pragati text-white text-2xl hover:cursor-pointer" onClick={scrollToGigs}>GIGS</p>
+            <p className="font-pragati text-white text-2xl hover:cursor-pointer" onClick={scrollToMusic}>MUSIC</p>
+            <p className="font-pragati text-white text-2xl hover:cursor-pointer" onClick={scrollToAbout}>ABOUT</p>
+            <p className="font-pragati text-white text-2xl hover:cursor-pointer">NEWS</p>
+        </nav>
     );
 }
-export default NavBar
+
+export default NavBar;

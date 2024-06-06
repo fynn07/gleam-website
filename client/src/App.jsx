@@ -28,7 +28,7 @@ function App() {
       const landingDistanceFromCenter = Math.abs(windowHeight / 10 - landingPosition * 1.2);
       const aboutDistanceFromCenter = Math.abs(windowHeight / 10 - aboutPosition * 1.2);
       const musicDistanceFromCenter = Math.abs(windowHeight / 10 - musicPosition * 1.2);
-      const gigDistanceFromCenter = Math.abs(windowHeight / 10 - gigPosition * 1.2);
+      const gigDistanceFromCenter = Math.abs(windowHeight / 8 - gigPosition * 0.8);
 
       // Calculate opacity based on distance from center
       const maxDistance = windowHeight / 2;
@@ -44,6 +44,14 @@ function App() {
     };
   }, []);
 
+  // Smooth scrolling function
+  const scrollToRef = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="relative">
       <div
@@ -55,8 +63,12 @@ function App() {
           zIndex: -1,
         }}
       />
-      <div className='px-40 py-5'>
-        <NavBar />
+      <div className='px-5 py-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40'>
+        <NavBar
+          scrollToAbout={() => scrollToRef(aboutRef)}
+          scrollToMusic={() => scrollToRef(musicRef)}
+          scrollToGigs={() => scrollToRef(gigRef)}
+        />
         <div style={{ opacity: landingOpacity}} ref={landingRef}>
           <Landing />
         </div>
@@ -64,10 +76,10 @@ function App() {
           <About />
         </div>
         <div style={{ opacity: musicOpacity }} ref={musicRef}>
-        <Music />
+          <Music />
         </div>
-        <div style={{ opacity: gigOpacity }} ref={gigRef}>
-        <Gigs />
+        <div ref={gigRef}>
+          <Gigs />
         </div>
       </div>
     </div>
