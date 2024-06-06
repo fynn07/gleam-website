@@ -75,7 +75,7 @@ function App() {
         <div style={{ opacity: aboutOpacity }} ref={aboutRef}>
           <About />
         </div>
-        <div style={{ opacity: musicOpacity }} ref={musicRef}>
+        <div ref={musicRef}>
           <Music />
         </div>
         <div ref={gigRef}>
