@@ -11,7 +11,7 @@ const About = () => {
                         hesitate to support us.
                     </p>
                 </div>
-                <img className="h-7rem rounded-full invisible hidden lg:visible lg:block xl:visible xl:block 2xl:visible 2xl:block" src="src/assets/gleam_logo.png" alt="gleam logo" />
+                <img className="h-7rem rounded-full invisible hidden lg:visible lg:block xl:visible xl:block 2xl:visible 2xl:block" src="/assets/gleam_logo.png" alt="gleam logo" />
 
             </div>
         </>
