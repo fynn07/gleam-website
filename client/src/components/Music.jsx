@@ -81,7 +81,7 @@ const Music = () => {
                     OUR MUSIC
                 </h2>
                 <div className="relative w-full max-w-screen-lg flex justify-center items-center">
-                    <img onClick={scrollLeft} ref={el => itemsRef.current[1] = el} className='h-16 mb-12 cursor-pointer hidden xl:block 2xl:block' src="public/assets/left-arrow-svgrepo-com.svg" alt="" />
+                    <img onClick={scrollLeft} ref={el => itemsRef.current[1] = el} className='h-16 mb-12 cursor-pointer hidden xl:block 2xl:block' src="/assets/left-arrow-svgrepo-com.svg" alt="" />
                     <div className="grid gap-16 grid-cols-1
                         md:grid-cols-2
                         lg:grid-cols-3
@@ -103,7 +103,7 @@ const Music = () => {
                             </div>
                         ))} 
                     </div>
-                    <img onClick={scrollRight} ref={el => itemsRef.current[10] = el} className='h-16 mb-12 cursor-pointer transform -scale-x-100 hidden xl:block 2xl:block' src="public/assets/left-arrow-svgrepo-com.svg" alt="" />
+                    <img onClick={scrollRight} ref={el => itemsRef.current[10] = el} className='h-16 mb-12 cursor-pointer transform -scale-x-100 hidden xl:block 2xl:block' src="/assets/left-arrow-svgrepo-com.svg" alt="" />
                 </div>
                 {isPlayerVisible && (
                     <AudioPlayer
