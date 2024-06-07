@@ -2,19 +2,19 @@ import React, { useEffect, useRef } from 'react';
 
 const Gigs = () => {
   const gigsData = [
-    { src: "/src/assets/gleam-gig-additional-1.jpeg", alt: "Grip EP Launch", text: "Grip Consequences: EP Release" },
-    { src: "/src/assets/gleam-gig-1.jpeg", alt: "haersthetic by jade: year 2", text: "Haersthetic By Jade: Year 2" },
-    { src: "/src/assets/gleam-gig-2.jpeg", alt: "all under molave", text: "All Under Molave" },
-    { src: "/src/assets/gleam-gig-3.jpeg", alt: "showgaze night", text: "Showgaze Night" },
-    { src: "/src/assets/gleam-gig-4.jpeg", alt: "hostile youth", text: "Hostile Youth" },
-    { src: "/src/assets/gleam-gig-5.jpeg", alt: "latag vol 3", text: "Latag Vol 3" },
-    { src: "/src/assets/gleam-gig-6.jpeg", alt: "gazin into the abyss", text: "Gazin Into the Abyss" },
-    { src: "/src/assets/gleam-gig-7.jpeg", alt: "latag vol 2", text: "Latag Vol 2" },
-    { src: "/src/assets/gleam-gig-8.jpeg", alt: "the jurro project", text: "The Jurro Project" },
-    { src: "/src/assets/gleam-gig-9.jpeg", alt: "Latag", text: "Latag" },
-    { src: "/src/assets/gleam-gig-10.jpeg", alt: "Born to Rock", text: "Born to Rock" },
-    { src: "/src/assets/gleam-gig-11.jpeg", alt: "fuzzed out session", text: "Fuzzed-Out Session" },
-    { src: "/src/assets/gleam-gig-12.jpeg", alt: "underground screams", text: "Underground Screams" },
+    { src: "/assets/gleam-gig-additional-1.jpeg", alt: "Grip EP Launch", text: "Grip Consequences: EP Release" },
+    { src: "/assets/gleam-gig-1.jpeg", alt: "haersthetic by jade: year 2", text: "Haersthetic By Jade: Year 2" },
+    { src: "/assets/gleam-gig-2.jpeg", alt: "all under molave", text: "All Under Molave" },
+    { src: "/assets/gleam-gig-3.jpeg", alt: "showgaze night", text: "Showgaze Night" },
+    { src: "/assets/gleam-gig-4.jpeg", alt: "hostile youth", text: "Hostile Youth" },
+    { src: "/assets/gleam-gig-5.jpeg", alt: "latag vol 3", text: "Latag Vol 3" },
+    { src: "/assets/gleam-gig-6.jpeg", alt: "gazin into the abyss", text: "Gazin Into the Abyss" },
+    { src: "/assets/gleam-gig-7.jpeg", alt: "latag vol 2", text: "Latag Vol 2" },
+    { src: "/assets/gleam-gig-8.jpeg", alt: "the jurro project", text: "The Jurro Project" },
+    { src: "/assets/gleam-gig-9.jpeg", alt: "Latag", text: "Latag" },
+    { src: "/assets/gleam-gig-10.jpeg", alt: "Born to Rock", text: "Born to Rock" },
+    { src: "/assets/gleam-gig-11.jpeg", alt: "fuzzed out session", text: "Fuzzed-Out Session" },
+    { src: "/assets/gleam-gig-12.jpeg", alt: "underground screams", text: "Underground Screams" },
   ];
 
   const itemsRef = useRef([]);

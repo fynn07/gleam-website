@@ -10,15 +10,15 @@ const Music = () => {
     const playMusic = (music, title) => {
         let src;
         if (music === "Back Hug") {
-            src = "src/assets/music/back hug - gleam.mp3";
+            src = "/assets/music/back hug - gleam.mp3";
         } else if (music === "Merry Go Round") {
-            src = "src/assets/music/gleam - merry go round.mp3";
+            src = "/assets/music/gleam - merry go round.mp3";
         } else if (music === "Tearing Myself Apart") {
-            src = "src/assets/music/tearing_myself_apart.mp3";
+            src = "/assets/music/tearing_myself_apart.mp3";
         } else if (music === "GoldFish") {
-            src = "src/assets/music/gleam - goldfish.mp3";
+            src = "/assets/music/gleam - goldfish.mp3";
         } else if (music === "Burgundy Red Lipstick") {
-            src = "src/assets/music/back_hug.mp3";
+            src = "/assets/music/back_hug.mp3";
         }
 
         if (src) {
@@ -68,11 +68,11 @@ const Music = () => {
                         style={{ scrollSnapType: 'x mandatory' }}>
                         
                         {[
-                            { src: "src/assets/gleam-song-1.jpeg", title: "GLEAM", subtitle: "Back Hug" },
-                            { src: "src/assets/gleam-song-2.jpeg", title: "GLEAM", subtitle: "Merry Go Round" },
-                            { src: "src/assets/gleam-song-3.jpeg", title: "GLEAM", subtitle: "GoldFish" },
-                            { src: "src/assets/gleam-song-4.jpeg", title: "GLEAM", subtitle: "Tearing Myself Apart" },
-                            { src: "src/assets/gleam-song-5.jpeg", title: "GLEAM", subtitle: "Burgundy Red Lipstick" },
+                            { src: "/assets/gleam-song-1.jpeg", title: "GLEAM", subtitle: "Back Hug" },
+                            { src: "/assets/gleam-song-2.jpeg", title: "GLEAM", subtitle: "Merry Go Round" },
+                            { src: "/assets/gleam-song-3.jpeg", title: "GLEAM", subtitle: "GoldFish" },
+                            { src: "/assets/gleam-song-4.jpeg", title: "GLEAM", subtitle: "Tearing Myself Apart" },
+                            { src: "/assets/gleam-song-5.jpeg", title: "GLEAM", subtitle: "Burgundy Red Lipstick" },
                         ].map((song, index) => (
                             <div key={index} onClick={() => playMusic(song.subtitle, song.title)} className="flex-col flex gap-2 object-cover w-64 animate-fadeOut" style={{ scrollSnapAlign: 'start' }} ref={el => itemsRef.current[index + 1] = el}>
                                 <img className="h-64 w-64 custom-border-animation rounded-md" src={song.src} alt="" />

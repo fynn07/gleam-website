@@ -57,7 +57,7 @@ function App() {
       <div
         className="fixed top-0 left-0 w-screen h-screen z-0"
         style={{
-          backgroundImage: 'url(src/assets/gleam_background.png)',
+          backgroundImage: 'url(/assets/gleam_background.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: -1,

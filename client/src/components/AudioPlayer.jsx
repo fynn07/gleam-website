@@ -90,7 +90,7 @@ const AudioPlayer = ({ audioSrc, title, subtitle, hidePlayer }) => {
                 <span className='hidden lg:block xl:block 2xl:block'>{Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}</span>
             </div>
             <audio ref={audioRef} src={audioSrc} />
-            <img src="src/assets/Exit Button.png" className='bg-white rounded-full h-8 mx-4' onClick={exitPlayer} alt="" />
+            <img src="/assets/Exit Button.png" className='bg-white rounded-full h-8 mx-4' onClick={exitPlayer} alt="" />
         </div>
     );
 };
