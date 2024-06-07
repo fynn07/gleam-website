@@ -72,11 +72,11 @@ const AudioPlayer = ({ audioSrc, title, subtitle, hidePlayer }) => {
     return (
         <div className="fixed bottom-0 left-0 w-full bg-black text-white flex items-center justify-between z-40 p-4 px-4 md:px-10 lg:px-12 xl:px-14 2xl:px-16">
             <div className='px-4'>
-                <p className="text-lg font-bold">{title}</p>
-                <p className="text-sm">{subtitle}</p>
+                <p className="text-sm font-bold md:text-sm lg:text-sm xl:text-lg 2xl:text-lg">{title}</p>
+                <p className="text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">{subtitle}</p>
             </div>
             <div className="flex items-center gap-4">
-                <button onClick={togglePlayPause} className="bg-white text-black py-2 rounded px-1 lg:px-2 xl:px-3 2xl:px-4">
+                <button onClick={togglePlayPause} className="bg-white text-black py-2 text-xs rounded px-1 lg:px-2 xl:px-3 2xl:px-4">
                     {isPlaying ? 'Pause' : 'Play'}
                 </button>
                 <input
