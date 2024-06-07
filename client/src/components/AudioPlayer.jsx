@@ -70,13 +70,13 @@ const AudioPlayer = ({ audioSrc, title, subtitle, hidePlayer }) => {
     };
 
     return (
-        <div className="fixed bottom-0 left-0 w-full bg-black text-white p-4 flex items-center justify-between z-40 px-16">
-            <div>
+        <div className="fixed bottom-0 left-0 w-full bg-black text-white flex items-center justify-between z-40 p-4 px-4 md:px-10 lg:px-12 xl:px-14 2xl:px-16">
+            <div className='px-4'>
                 <p className="text-lg font-bold">{title}</p>
                 <p className="text-sm">{subtitle}</p>
             </div>
             <div className="flex items-center gap-4">
-                <button onClick={togglePlayPause} className="bg-white text-black px-4 py-2 rounded">
+                <button onClick={togglePlayPause} className="bg-white text-black py-2 rounded px-1 lg:px-2 xl:px-3 2xl:px-4">
                     {isPlaying ? 'Pause' : 'Play'}
                 </button>
                 <input
@@ -85,12 +85,12 @@ const AudioPlayer = ({ audioSrc, title, subtitle, hidePlayer }) => {
                     max={duration}
                     value={currentTime}
                     onChange={handleSeek}
-                    className="w-64 bg-black"
+                    className="w-28 bg-black md:w-36 lg:w-44 xl:w-56  2xl:w-64"
                 />
-                <span>{Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}</span>
+                <span className='hidden lg:block xl:block 2xl:block'>{Math.floor(currentTime / 60)}:{Math.floor(currentTime % 60).toString().padStart(2, '0')}</span>
             </div>
             <audio ref={audioRef} src={audioSrc} />
-            <img src="src/assets/Exit Button.png" className='bg-white rounded-full' onClick={exitPlayer} alt="" />
+            <img src="src/assets/Exit Button.png" className='bg-white rounded-full h-8 mx-4' onClick={exitPlayer} alt="" />
         </div>
     );
 };

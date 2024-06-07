@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const Gigs = () => {
   const gigsData = [
+    { src: "src/assets/gleam-gig-additional-1.jpeg", alt: "Grip EP Launch", text: "Grip Consequences: EP Release" },
     { src: "src/assets/gleam-gig-1.jpeg", alt: "haersthetic by jade: year 2", text: "Haersthetic By Jade: Year 2" },
     { src: "src/assets/gleam-gig-2.jpeg", alt: "all under molave", text: "All Under Molave" },
     { src: "src/assets/gleam-gig-3.jpeg", alt: "showgaze night", text: "Showgaze Night" },
@@ -41,7 +42,7 @@ const Gigs = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center min-h-screen pt-40 z-50">
+    <div className="flex justify-center items-center min-h-screen my-40 z-50">
       <div className="flex flex-col gap-11">
         <h2 className="text-center text-white font-oswald text-4xl animate-fadeOut" ref={el => itemsRef.current[0] = el}>Past Gigs</h2>
         <div className="flex flex-wrap gap-6 justify-center">
