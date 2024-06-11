@@ -19,7 +19,7 @@ const Music = () => {
         } else if (music === "GoldFish") {
             src = "/assets/music/gleam - goldfish.mp3";
         } else if (music === "Burgundy Red Lipstick") {
-            src = "/assets/music/back_hug.mp3";
+            src = "/assets/music/burgundy - gleam.mp3";
         }
 
         if (src) {
@@ -93,8 +93,8 @@ const Music = () => {
                             { src: "/assets/gleam-song-1.jpeg", title: "GLEAM", subtitle: "Back Hug" },
                             { src: "/assets/gleam-song-2.jpeg", title: "GLEAM", subtitle: "Merry Go Round" },
                             { src: "/assets/gleam-song-3.jpeg", title: "GLEAM", subtitle: "GoldFish" },
-                            { src: "/assets/gleam-song-4.jpeg", title: "GLEAM", subtitle: "Tearing Myself Apart" },
                             { src: "/assets/gleam-song-5.jpeg", title: "GLEAM", subtitle: "Burgundy Red Lipstick" },
+                            { src: "/assets/gleam-song-4.jpeg", title: "GLEAM", subtitle: "Tearing Myself Apart" },
                         ].map((song, index) => (
                             <div key={index} onClick={() => playMusic(song.subtitle, song.title)} className="flex-col flex gap-2 object-cover w-64 animate-fadeOut" style={{ scrollSnapAlign: 'start' }} ref={el => itemsRef.current[index + 1] = el}>
                                 <img className="h-64 w-64 custom-border-animation rounded-md" src={song.src} alt="" />
