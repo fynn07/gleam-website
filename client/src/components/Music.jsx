@@ -78,7 +78,7 @@ const Music = () => {
                     className="text-5xl text-white font-oswald pb-12 text-center animate-fadeOut" 
                     ref={el => itemsRef.current[0] = el}
                 >
-                    OUR MUSIC
+                    OUR DEMOS
                 </h2>
                 <div className="relative w-full max-w-screen-lg flex justify-center items-center">
                     <img onClick={scrollLeft} ref={el => itemsRef.current[1] = el} className='h-16 mb-12 cursor-pointer hidden xl:block 2xl:block' src="/assets/left-arrow-svgrepo-com.svg" alt="" />
