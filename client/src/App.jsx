@@ -54,14 +54,15 @@ function App() {
 
   return (
     <div className="relative">
-      <div
-        className="fixed top-0 left-0 w-screen h-screen z-0"
+      <img
+        fetchPriority='high'
+        src="/assets/gleam_background.png"
+        alt="Background"
+        className="fixed top-0 left-0 w-screen h-screen z-0 object-cover"
         style={{
-          backgroundImage: 'url(/assets/gleam_background.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          zIndex: -1,
+          zIndex: -1
         }}
+        loading="eager"
       />
       <div className='px-5 py-5 md:px-10 lg:px-20 xl:px-30 2xl:px-40'>
         <NavBar
